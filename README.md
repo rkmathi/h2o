@@ -1,3 +1,14 @@
+# Usage
+```shell
+cd /path/to/here
+
+cmake -DCMAKE_INSTALL_PREFIX=./ -DWITH_MRUBY=on cmake . && make
+
+./h2o --conf examples/h2o_mruby/h2o.conf
+```
+
+---
+
 H2O - an optimized HTTP server with support for HTTP/1.x and HTTP/2
 ===
 

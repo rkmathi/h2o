@@ -449,7 +449,10 @@ IF (WITH_MRUBY)
     TARGET_LINK_LIBRARIES(h2o
         "${CMAKE_CURRENT_BINARY_DIR}/mruby/host/lib/libmruby.a"
         "${CMAKE_CURRENT_BINARY_DIR}/mruby/host/mrbgems/mruby-onig-regexp/onig-5.15.0/.libs/libonig.a"
-        "m")
+        "${CMAKE_CURRENT_BINARY_DIR}/mruby/host/mrbgems/mruby-redis/hiredis/libhiredis.a"
+        "m"
+        "mysqlclient"
+        )
     ADD_DEPENDENCIES(h2o mruby)
 ENDIF (WITH_MRUBY)
 TARGET_LINK_LIBRARIES(h2o ${EXTRA_LIBS})
